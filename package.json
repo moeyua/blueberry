@@ -1,7 +1,7 @@
 {
   "name": "@moeyua/blueberry",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": "false",
   "packageManager": "pnpm@8.11.0",
   "description": "Blueberry is a tiny frontend framework that gives you reactivity and composability.",
