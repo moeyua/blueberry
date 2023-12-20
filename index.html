@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blueberry</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- define component -->
+      <template name="plum-p">
+        <h1 style="color: #466BAE"><slot /></h1>
+      </template>
+      <!-- use component -->
+      <plum-p data-mark="counter"></plum-p>
+      <button id="button">counter</button>
+    </div>
+
+    <script type="module">
+      import { initBlueberry, reactive } from "/src/index.ts";
+      // init blueberry
+      initBlueberry();
+      // use reactive
+      const user = reactive({});
+      user.counter = 0;
+
+      const button = document.querySelector("button");
+      if (button) {
+        button.addEventListener("click", () => {
+          user.counter++;
+        });
+      }
+    </script>
+  </body>
+</html>
